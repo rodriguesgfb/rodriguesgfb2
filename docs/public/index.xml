@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gabriel Rodrigues</title>
+    <link>/</link>
+      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <description>Gabriel Rodrigues</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Gabriel Rodrigues</title>
+      <link>/</link>
+    </image>
+    
+    <item>
+      <title>Example Page 1</title>
+      <link>/courses/example/example1/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>/courses/example/example1/</guid>
+      <description>&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Page 2</title>
+      <link>/courses/example/example2/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>/courses/example/example2/</guid>
+      <description>&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
+&lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;h2 id=&#34;tip-4&#34;&gt;Tip 4&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Talk</title>
+      <link>/talk/example/</link>
+      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      <guid>/talk/example/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Particionando a diversidade beta</title>
+      <link>/post/betapart/beta/</link>
+      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/post/betapart/beta/</guid>
+      <description>
+
+
+&lt;p&gt;Há muito tempo naturalistas e ecólogos entendem que a diversidade biológica não está homogeneamente distribuída na superfície da Terra. Dessa forma, a diversidade beta tenta entender o quão diferente (ou quão similar) é a comunidade de dois ou mais locais (ou tempos) distintos. Geralmente as métricas de diversidade beta são baseadas em similaridade, variando de zero (comunidades totalmente distintas) até um (comunidades totalmente similares).&lt;/p&gt;
+&lt;div id=&#34;o-que-torna-duas-comunidades-distintas&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;O que torna duas comunidades distintas&lt;/h2&gt;
+&lt;p&gt;Potencialmente dois processos distintos e complementares podem resultar na diferença das comunidades &lt;span class=&#34;citation&#34;&gt;(Baselga and Orme 2012)&lt;/span&gt;.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Reposição de espécies (turnover)&lt;/strong&gt;: Consiste na substituição de espécies de um local por espécies diferentes em outro local.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Perda (ou ganho) de espécies&lt;/strong&gt;: Consiste no desaparecimento (ou aparecimento) de uma espécie em um único local, tornando assim a comunidade de menor número de espécies (menor riqueza) um subconjunto da comunidade com maior número de espécies. Esse padrão pode ser chamado de aninhamento &lt;strong&gt;(nestedness)&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;funções-do-pacote-betapart-baselga2012betapart&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Funções do pacote &lt;code&gt;betapart()&lt;/code&gt; &lt;span class=&#34;citation&#34;&gt;(Baselga and Orme 2012)&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;A função desse pacote é disponibilizar um conjunto de ferramentas para calcular e particionar a diversidade beta em seus dois componentes descritos &lt;strong&gt;(turnover e nestedness)&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;calculando-os-componentes-e-database-utilizado.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Calculando os componentes e database utilizado.&lt;/h2&gt;
+&lt;p&gt;Para calcular os componentes da diversidade beta iremos utilizar a Database embutida no pacote &lt;code&gt;betapart()&lt;/code&gt; que consiste na diversidade de aves dos Estados Unidos da América nos anos de 1980 e 2000.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;require(betapart) #carregar pacote
+data(bbsData) #Carregar database&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;objetos-utilizados&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Objetos utilizados&lt;/h3&gt;
+&lt;p&gt;Primeiramente é necessário criar uma matriz de dissimilaridade &lt;strong&gt;(betapart object)&lt;/strong&gt; baseado numa matriz de presença/ausência, necessário para outras análises utilizando a função &lt;code&gt;betapart.core()&lt;/code&gt;. O conjunto de dados aceito para todas as funções do &lt;code&gt;betapart()&lt;/code&gt; consiste em uma matrix (m) de presença (1) e ausência (0) de &lt;em&gt;m&lt;/em&gt; espécies (colunas) em &lt;em&gt;n&lt;/em&gt; locais (linhas).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Criar objeto betapart
+beta1980&amp;lt;- betapart.core(bbs1980) #Criando objeto da comunidade de Aves de 1980
+beta2000&amp;lt;- betapart.core(bbs2000) #Criando objeto da comunidade de Aves de 2000&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Agora com os objetos criados é possível calcular a diversidade beta total e seus 2 componentes (turnover e nestedness).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bm1980&amp;lt;-beta.multi(beta1980, &amp;quot;sorensen&amp;quot;)
+bm2000&amp;lt;-beta.multi(beta2000,&amp;quot;sorensen&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;função-beta.pair&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Função &lt;code&gt;beta.pair()&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Para calcular a diversidade beta total e seus componentes entre cada par de local amostrado utiliza-se a função &lt;code&gt;beta.pair()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bp1980&amp;lt;-beta.pair(beta1980, &amp;quot;sorensen&amp;quot;)
+bp2000&amp;lt;-beta.pair(beta2000,&amp;quot;sorensen&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Para representar graficamente a diversidade beta pode ser feito uma análise de agrupamento (clusters) com os dados já calculados.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(hclust(bp1980$beta.sor, method=&amp;quot;average&amp;quot;), hang=-1, main=&amp;#39;&amp;#39;, sub=&amp;#39;&amp;#39;, xlab=&amp;#39;&amp;#39;) 
+title(xlab=expression(beta[sor]), line=0.3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/Betapart/beta_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(hclust(bp2000$beta.sor, method=&amp;quot;average&amp;quot;), hang=-1, main=&amp;#39;&amp;#39;, sub=&amp;#39;&amp;#39;, xlab=&amp;#39;&amp;#39;) 
+title(xlab=expression(beta[sor]), line=0.3)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/Betapart/beta_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Para entender melhor o que torna as comunidades distintas é necessário entender o padrão dos valores dos componentes encontrados. Para isso podemos agrupar os valores de &lt;strong&gt;turnover&lt;/strong&gt; e &lt;strong&gt;nestedness&lt;/strong&gt; encontrados em cada comparação par-a-par de 2 locais diferentes em 2 períodos diferentes.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;require(tidyverse)
+#Acessando componentes
+turnover&amp;lt;- as.matrix(bp1980$beta.sim) ##Para acessar o componente turnover
+nestedness&amp;lt;- as.matrix(bp1980$beta.sne)##Para acessar o componente nestedness
+
+#Manipulando os dados
+library(reshape)
+turnover&amp;lt;-melt(turnover)
+nestedness&amp;lt;-melt(nestedness)
+
+turnover&amp;lt;- data.frame(turnover, component = &amp;quot;turnover&amp;quot;)
+nestedness&amp;lt;- data.frame(nestedness, component = &amp;quot;nestedness&amp;quot;)
+df1&amp;lt;- bind_rows(turnover, nestedness)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Para representar os valores dos componentes encontrados utilizaremos um gráfico de densidade utilizando o pacote &lt;code&gt;ggplot2()&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=df1, aes(group = component,fill=component, x = value)) +
+  geom_density(adjust=1.5, alpha = .8)+ theme_classic() + labs()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/Betapart/beta_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Podemos perceber que o componente &lt;strong&gt;nestedness&lt;/strong&gt; possuem geralmente menores valores (0 - 0.25), dessa forma a distinção dessas comunidades é explicada principalmente pelo componente &lt;strong&gt;turnover&lt;/strong&gt;, ou seja, pela reposição (substituição) de espécies entre um local e outro.&lt;/p&gt;
+&lt;p&gt;Qualquer dúvida, correção ou sugestão pode ser encaminhada para &lt;a href=&#34;mailto:gfellipe5@gmail.com&#34;&gt;gfellipe5@gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;referências&#34; class=&#34;section level3 unnumbered&#34;&gt;
+&lt;h3&gt;Referências&lt;/h3&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-baselga2012betapart&#34;&gt;
+&lt;p&gt;Baselga, Andrés, and C David L Orme. 2012. “Betapart: An R Package for the Study of Beta Diversity.” &lt;em&gt;Methods in Ecology and Evolution&lt;/em&gt; 3 (5). Wiley Online Library: 808–12.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Medindo a diversidade funcional</title>
+      <link>/post/fd/fd1/</link>
+      <pubDate>Fri, 05 Jun 2020 17:30:21 -0300</pubDate>
+      <guid>/post/fd/fd1/</guid>
+      <description>
+
+
+&lt;p&gt;A diversidade funcional vem se destacando como uma das mais promissoras maneiras de se medir a diversidade biológica, por incorporar traços funcionas que possuem algum valor ecológico e que possuem alguma importância na manutenção dos serviços ecossistêmicos. Sendo assim, a proposta discutida por &lt;span class=&#34;citation&#34;&gt;(Villéger, Mason, and Mouillot 2008)&lt;/span&gt; é de utilizar três índices independentes e complementares para descrever a diversidade funcional de uma determinada comunidade.&lt;/p&gt;
+&lt;p&gt;Os índices são:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Functional Richness (Frich)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Functional Evenness (Feven)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Functional Divergence (Fdiv)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;considerções-sobre-a-escolha-dos-traços-funcionais&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Considerções sobre a escolha dos traços funcionais&lt;/h1&gt;
+&lt;p&gt;A escolha dos traços funcionais são de extrema importância para a descrição da diversidade funcional de uma comunidade, buscando evitar redundância entre os mesmos. As análises a seguir suportam tanto dados quantitativos (peso, altura, comprimento e etc.), como qualitativos (cor, sexo, estágio de desenvolvimento e etc.).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;breve-explicação-dos-índices&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Breve explicação dos índices&lt;/h1&gt;
+&lt;p&gt;Levando em conta que o Nicho funcional possui T dimensões definidas por T eixos, cada eixo defino por cada traço funcional, a riqueza funcional de uma comunidade &lt;em&gt;(Frich)&lt;/em&gt; pode ser calculada como o espaço preenchido por determinada comunidade. Cada espécie representa um ponto no espaço, assim estima-se o volume preenchido no espaço T dimensional. A uniformidade funcional &lt;em&gt;(Feven)&lt;/em&gt; pode ser entendida como a regularidade com que o espaço é preenchido pelas espécies, esse índice vai de 0 a 1, sendo que 1 representa uma comunidade onde as espécies estão todas equidistantes no plano funcional. Por fim, a divergência funcional &lt;em&gt;(Fdiv)&lt;/em&gt; refere-se a quão divergentes as espécies são dentro de uma comunidade. Esse índice também varia de 0 a 1, sendo que 1 representa quando as espécies mais abundantes estão distantes do “centro de gravidade” do espaço funcional.&lt;/p&gt;
+&lt;p&gt;Para maiores detalhes sobre os índices funcionais consultar &lt;em&gt;Velligér et al.(2008)&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;calculando-índices-de-diversidade-funcional&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Calculando índices de diversidade funcional&lt;/h1&gt;
+&lt;p&gt;Para isso será necessário utilizar os seguintes pacotes:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;require(FD)
+require(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;objetos-utilizados&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Objetos utilizados&lt;/h2&gt;
+&lt;p&gt;Para calcular os índices de diversidade funcional é necessário 2 objetos, (1) contendo as variáveis funcionais nas colunas e as espécies e (2) contendo a abundância das espécies em cada comunidade. Para isso iremos utilizar os dados presentes no pacote &lt;code&gt;FD&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data(&amp;quot;dummy&amp;quot;) #carregar dados
+
+dummy$trait # traços morfológicos&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##     num1 num2 fac1 fac2 ord1 ord2 bin1 bin2
+## sp1  9.0  4.5    A    X    3    2    0    1
+## sp2  8.1  6.0    A    Z &amp;lt;NA&amp;gt;    1    0    1
+## sp3   NA  2.3    C    Y    5    3    1    1
+## sp4  3.2  5.4    B    Z    1    7    0    0
+## sp5  5.8  1.2    C    X    2    6   NA    0
+## sp6  3.4  8.5    C    Y    2    1    1    1
+## sp7  7.5  2.1    B    X    3    2    1    0
+## sp8  4.3  6.5 &amp;lt;NA&amp;gt;    Z    1    3    0    1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dummy$abun #matriz de abundância&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##       sp1 sp2 sp3 sp4 sp5 sp6 sp7 sp8
+## com1    1   1   0   0   4   2   0   0
+## com2    0   0   0   2   1   0   0   5
+## com3    2   0   0   0   0   1   0   3
+## com4    1   0   7   0   0   0   0   0
+## com5    0   0   2   3   3   0   0   0
+## com6    0   3   0   0   5   6   1   6
+## com7    3   5   0   3   0   0   0   0
+## com8    0   0   0   0   6   2   1   2
+## com9    4   1   1   3   0   0   2   0
+## com10   0   4   1   0   0   0   6   1&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;função-dbfd&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Função &lt;code&gt;dbFD()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Essa função permite calcular de uma única vez os três índices descritos anteriormente.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ex1&amp;lt;-dbFD(dummy$trait, dummy$abun)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ex1$FRic # Functional Richness&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        com1        com2        com3        com4        com5        com6 
+## 0.174201349 0.102097174 0.002157642          NA 0.143151204 0.231083703 
+##        com7        com8        com9       com10 
+## 0.073683375 0.174220613 0.337446205 0.228904118&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ex1$FEve #Functional Evenness &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      com1      com2      com3      com4      com5      com6      com7      com8 
+## 0.8432334 0.4628635 0.8659657        NA 0.9081209 0.8651734 0.7681991 0.7606650 
+##      com9     com10 
+## 0.7994638 0.4944601&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ex1$FDiv #Functional Divergence&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##      com1      com2      com3      com4      com5      com6      com7      com8 
+## 0.8429221 0.8593250 0.6303031        NA 0.7631346 0.8966687 0.8356095 0.8681163 
+##      com9     com10 
+## 0.7015118 0.9712554&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Podemos representar visualmente a riqueza funcional &lt;em&gt;(Frich)&lt;/em&gt; da seguinte maneira:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;trait.d &amp;lt;- gowdis(dummy$trait) #Calcular uma medida de distância
+nmds&amp;lt;- metaMDS(trait.d) #utilizar uma análise de ordenação
+
+##criar data.frame com os valores da ordenação 
+MDS1&amp;lt;- nmds$points[,1]
+MDS2&amp;lt;- nmds$points[,2]
+nmds&amp;lt;- data.frame(MDS1 = MDS1, MDS2 = MDS2)
+
+#calculando volume do espaco funcional 
+hull &amp;lt;- nmds %&amp;gt;%
+  slice(chull(MDS1, MDS2))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Plotando o gráfico
+ggplot(nmds, aes(x=MDS1,y=MDS2)) + geom_point(size=3)  + geom_polygon(data = hull, alpha = 0.5,col= &amp;quot;black&amp;quot;, fill = &amp;quot;olivedrab4&amp;quot;)+ theme_classic() + labs(title = &amp;quot;Functional Richness&amp;quot;,x = NULL, y = NULL)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/FD/FD1_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Com esses três índices é possível traçar um melhor panorama da comunidade e identificar mudanças ao longo do espaço e/ou tempo.&lt;/p&gt;
+&lt;p&gt;Qualquer dúvida, correção ou sugestão pode ser encaminhada para &lt;a href=&#34;mailto:gfellipe5@gmail.com&#34;&gt;gfellipe5@gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;referências&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;Referências&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-villeger2008new&#34;&gt;
+&lt;p&gt;Villéger, Sébastien, Norman WH Mason, and David Mouillot. 2008. “New Multidimensional Functional Diversity Indices for a Multifaceted Framework in Functional Ecology.” &lt;em&gt;Ecology&lt;/em&gt; 89 (8). Wiley Online Library: 2290–2301.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Structural patterns of a coastal hermit crab−gastropod shell interaction network: new insights from a unique relationship</title>
+      <link>/publication/meps/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/meps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The hermit crab–shell relationship through the lens of interaction networks: The use of network metrics and species role across communities</title>
+      <link>/publication/austral/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/austral/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Environmental factors modulating the bathymetric distribution of the demographic groups of Achelous spinimanus (Crustacea)</title>
+      <link>/publication/camila/</link>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/camila/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Slides</title>
+      <link>/slides/example/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/slides/example/</guid>
+      <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;Mobile friendly slides&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
+&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Code block:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
+if porridge == &amp;quot;blueberry&amp;quot;:
+    print(&amp;quot;Eating...&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
+&lt;p&gt;Block math:&lt;/p&gt;
+&lt;p&gt;$$
+f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
+&lt;p&gt;Make content appear incrementally&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
+One
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+&lt;strong&gt;Two&lt;/strong&gt;
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+Three
+&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
+&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
+- Only the speaker can read these notes
+- Press `S` key to view
+{{% /speaker_note %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
+&lt;aside class=&#34;notes&#34;&gt;
+  &lt;ul&gt;
+&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/aside&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;/img/boards.jpg&#34;
+  &gt;
+
+&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
+&lt;p&gt;Customize the slide style and background&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/img/boards.jpg&amp;quot; &amp;gt;}}
+{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
+{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  color: navy;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Terms</title>
+      <link>/terms/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/terms/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Decapod crustaceans captured along with the sea-bob shrimp fisheries on non-consolidated sublitoral from northern coast of São Paulo, Brazil</title>
+      <link>/publication/pesca/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      <guid>/publication/pesca/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The different depths gradients may affect the reproductive dynamics of Hepatus pudibundus (Herbst, 1785) (Decapoda: Aethridae) in the southeastern region of Brazil</title>
+      <link>/publication/veronica/</link>
+      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
+      <guid>/publication/veronica/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
