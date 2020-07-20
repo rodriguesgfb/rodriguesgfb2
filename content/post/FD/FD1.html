@@ -1,0 +1,110 @@
+---
+title: "Medindo a diversidade funcional"
+lastmod: '2020-06-05T17:30:21-03:00'
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
+bibliography: scholar.bib
+---
+
+
+
+<p>A diversidade funcional vem se destacando como uma das mais promissoras maneiras de se medir a diversidade biológica, por incorporar traços funcionas que possuem algum valor ecológico e que possuem alguma importância na manutenção dos serviços ecossistêmicos. Sendo assim, a proposta discutida por <span class="citation">(Villéger, Mason, and Mouillot 2008)</span> é de utilizar três índices independentes e complementares para descrever a diversidade funcional de uma determinada comunidade.</p>
+<p>Os índices são:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Functional Richness (Frich)</strong></li>
+<li><strong>Functional Evenness (Feven)</strong></li>
+<li><strong>Functional Divergence (Fdiv)</strong></li>
+</ol>
+<div id="considerções-sobre-a-escolha-dos-traços-funcionais" class="section level1">
+<h1>Considerções sobre a escolha dos traços funcionais</h1>
+<p>A escolha dos traços funcionais são de extrema importância para a descrição da diversidade funcional de uma comunidade, buscando evitar redundância entre os mesmos. As análises a seguir suportam tanto dados quantitativos (peso, altura, comprimento e etc.), como qualitativos (cor, sexo, estágio de desenvolvimento e etc.).</p>
+</div>
+<div id="breve-explicação-dos-índices" class="section level1">
+<h1>Breve explicação dos índices</h1>
+<p>Levando em conta que o Nicho funcional possui T dimensões definidas por T eixos, cada eixo defino por cada traço funcional, a riqueza funcional de uma comunidade <em>(Frich)</em> pode ser calculada como o espaço preenchido por determinada comunidade. Cada espécie representa um ponto no espaço, assim estima-se o volume preenchido no espaço T dimensional. A uniformidade funcional <em>(Feven)</em> pode ser entendida como a regularidade com que o espaço é preenchido pelas espécies, esse índice vai de 0 a 1, sendo que 1 representa uma comunidade onde as espécies estão todas equidistantes no plano funcional. Por fim, a divergência funcional <em>(Fdiv)</em> refere-se a quão divergentes as espécies são dentro de uma comunidade. Esse índice também varia de 0 a 1, sendo que 1 representa quando as espécies mais abundantes estão distantes do “centro de gravidade” do espaço funcional.</p>
+<p>Para maiores detalhes sobre os índices funcionais consultar <em>Velligér et al.(2008)</em></p>
+</div>
+<div id="calculando-índices-de-diversidade-funcional" class="section level1">
+<h1>Calculando índices de diversidade funcional</h1>
+<p>Para isso será necessário utilizar os seguintes pacotes:</p>
+<pre class="r"><code>require(FD)
+require(tidyverse)</code></pre>
+<div id="objetos-utilizados" class="section level2">
+<h2>Objetos utilizados</h2>
+<p>Para calcular os índices de diversidade funcional é necessário 2 objetos, (1) contendo as variáveis funcionais nas colunas e as espécies e (2) contendo a abundância das espécies em cada comunidade. Para isso iremos utilizar os dados presentes no pacote <code>FD</code></p>
+<pre class="r"><code>data(&quot;dummy&quot;) #carregar dados
+
+dummy$trait # traços morfológicos</code></pre>
+<pre><code>##     num1 num2 fac1 fac2 ord1 ord2 bin1 bin2
+## sp1  9.0  4.5    A    X    3    2    0    1
+## sp2  8.1  6.0    A    Z &lt;NA&gt;    1    0    1
+## sp3   NA  2.3    C    Y    5    3    1    1
+## sp4  3.2  5.4    B    Z    1    7    0    0
+## sp5  5.8  1.2    C    X    2    6   NA    0
+## sp6  3.4  8.5    C    Y    2    1    1    1
+## sp7  7.5  2.1    B    X    3    2    1    0
+## sp8  4.3  6.5 &lt;NA&gt;    Z    1    3    0    1</code></pre>
+<pre class="r"><code>dummy$abun #matriz de abundância</code></pre>
+<pre><code>##       sp1 sp2 sp3 sp4 sp5 sp6 sp7 sp8
+## com1    1   1   0   0   4   2   0   0
+## com2    0   0   0   2   1   0   0   5
+## com3    2   0   0   0   0   1   0   3
+## com4    1   0   7   0   0   0   0   0
+## com5    0   0   2   3   3   0   0   0
+## com6    0   3   0   0   5   6   1   6
+## com7    3   5   0   3   0   0   0   0
+## com8    0   0   0   0   6   2   1   2
+## com9    4   1   1   3   0   0   2   0
+## com10   0   4   1   0   0   0   6   1</code></pre>
+</div>
+<div id="função-dbfd" class="section level2">
+<h2>Função <code>dbFD()</code></h2>
+<p>Essa função permite calcular de uma única vez os três índices descritos anteriormente.</p>
+<pre class="r"><code>ex1&lt;-dbFD(dummy$trait, dummy$abun)</code></pre>
+<pre class="r"><code>ex1$FRic # Functional Richness</code></pre>
+<pre><code>##        com1        com2        com3        com4        com5        com6 
+## 0.174201349 0.102097174 0.002157642          NA 0.143151204 0.231083703 
+##        com7        com8        com9       com10 
+## 0.073683375 0.174220613 0.337446205 0.228904118</code></pre>
+<pre class="r"><code>ex1$FEve #Functional Evenness </code></pre>
+<pre><code>##      com1      com2      com3      com4      com5      com6      com7      com8 
+## 0.8432334 0.4628635 0.8659657        NA 0.9081209 0.8651734 0.7681991 0.7606650 
+##      com9     com10 
+## 0.7994638 0.4944601</code></pre>
+<pre class="r"><code>ex1$FDiv #Functional Divergence</code></pre>
+<pre><code>##      com1      com2      com3      com4      com5      com6      com7      com8 
+## 0.8429221 0.8593250 0.6303031        NA 0.7631346 0.8966687 0.8356095 0.8681163 
+##      com9     com10 
+## 0.7015118 0.9712554</code></pre>
+<p>Podemos representar visualmente a riqueza funcional <em>(Frich)</em> da seguinte maneira:</p>
+<pre class="r"><code>trait.d &lt;- gowdis(dummy$trait) #Calcular uma medida de distância
+nmds&lt;- metaMDS(trait.d) #utilizar uma análise de ordenação
+
+##criar data.frame com os valores da ordenação 
+MDS1&lt;- nmds$points[,1]
+MDS2&lt;- nmds$points[,2]
+nmds&lt;- data.frame(MDS1 = MDS1, MDS2 = MDS2)
+
+#calculando volume do espaco funcional 
+hull &lt;- nmds %&gt;%
+  slice(chull(MDS1, MDS2))</code></pre>
+<pre class="r"><code>#Plotando o gráfico
+ggplot(nmds, aes(x=MDS1,y=MDS2)) + geom_point(size=3)  + geom_polygon(data = hull, alpha = 0.5,col= &quot;black&quot;, fill = &quot;olivedrab4&quot;)+ theme_classic() + labs(title = &quot;Functional Richness&quot;,x = NULL, y = NULL)</code></pre>
+<p><img src="/post/FD/FD1_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Com esses três índices é possível traçar um melhor panorama da comunidade e identificar mudanças ao longo do espaço e/ou tempo.</p>
+<p>Qualquer dúvida, correção ou sugestão pode ser encaminhada para <a href="mailto:gfellipe5@gmail.com">gfellipe5@gmail.com</a></p>
+</div>
+<div id="referências" class="section level2 unnumbered">
+<h2>Referências</h2>
+<div id="refs" class="references">
+<div id="ref-villeger2008new">
+<p>Villéger, Sébastien, Norman WH Mason, and David Mouillot. 2008. “New Multidimensional Functional Diversity Indices for a Multifaceted Framework in Functional Ecology.” <em>Ecology</em> 89 (8). Wiley Online Library: 2290–2301.</p>
+</div>
+</div>
+</div>
+</div>

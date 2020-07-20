@@ -1,0 +1,94 @@
+---
+title: "Medindo a diversidade funcional"
+lastmod: '2020-06-05T17:30:21-03:00'
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
+bibliography: scholar.bib
+---
+
+  ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+A diversidade funcional vem se destacando como uma das mais promissoras maneiras de se medir a diversidade biológica, por incorporar traços funcionas que possuem algum valor ecológico e que possuem alguma importância na manutenção dos serviços ecossistêmicos. Sendo assim, a proposta discutida por [@villeger2008new] é de utilizar três índices independentes e complementares para descrever a diversidade funcional de uma determinada comunidade. 
+
+Os índices são:  
+  
+  1.  **Functional Richness (Frich)**
+  2.  **Functional Evenness (Feven)**
+  3.  **Functional Divergence (Fdiv)**
+  
+#Considerções sobre a escolha dos traços funcionais 
+  A escolha dos traços funcionais são de extrema importância para a descrição da diversidade funcional de uma comunidade, buscando evitar redundância entre os mesmos. As análises a seguir suportam tanto dados quantitativos (peso, altura, comprimento e etc.), como qualitativos (cor, sexo, estágio de desenvolvimento e etc.). 
+
+#Breve explicação dos índices
+Levando em conta que o Nicho funcional possui T dimensões definidas por T eixos, cada eixo defino por cada traço funcional, a riqueza funcional de uma comunidade *(Frich)* pode ser calculada como o espaço preenchido por determinada comunidade. Cada espécie representa um ponto no espaço, assim estima-se o volume preenchido no espaço T dimensional. A uniformidade funcional *(Feven)* pode ser entendida como a regularidade com que o espaço é preenchido pelas espécies, esse índice vai de 0 a 1, sendo que 1 representa uma comunidade onde as espécies estão todas equidistantes no plano funcional. Por fim, a divergência funcional *(Fdiv)* refere-se a quão divergentes as espécies são dentro de uma comunidade. Esse índice também varia de 0 a 1, sendo que 1 representa quando as espécies mais abundantes estão distantes do "centro de gravidade"  do espaço funcional.
+
+Para maiores detalhes sobre os  índices funcionais consultar *Velligér et al.(2008)* 
+  
+  
+#Calculando índices de diversidade funcional
+  Para isso será necessário utilizar os seguintes pacotes: 
+  
+```{r, message = F}
+require(FD)
+require(tidyverse)
+
+```
+
+
+##Objetos utilizados
+Para calcular os índices de diversidade funcional é necessário 2 objetos, (1) contendo as variáveis funcionais nas colunas e as espécies e (2) contendo a abundância das espécies em cada comunidade. Para isso iremos utilizar os dados presentes no pacote `FD`
+
+```{r}
+data("dummy") #carregar dados
+
+dummy$trait # traços morfológicos
+dummy$abun #matriz de abundância
+```
+
+##Função `dbFD()`
+Essa função permite calcular de uma única vez os três índices descritos anteriormente.
+```{r,  message = F, results='hide'}
+ex1<-dbFD(dummy$trait, dummy$abun)
+
+```
+
+
+```{r}
+ex1$FRic # Functional Richness
+ex1$FEve #Functional Evenness 
+ex1$FDiv #Functional Divergence
+```
+
+Podemos representar visualmente a riqueza funcional *(Frich)* da seguinte maneira:
+
+```{r, message = F, warning = F, results='hide'}
+trait.d <- gowdis(dummy$trait) #Calcular uma medida de distância
+nmds<- metaMDS(trait.d) #utilizar uma análise de ordenação
+
+##criar data.frame com os valores da ordenação 
+MDS1<- nmds$points[,1]
+MDS2<- nmds$points[,2]
+nmds<- data.frame(MDS1 = MDS1, MDS2 = MDS2)
+
+#calculando volume do espaco funcional 
+hull <- nmds %>%
+  slice(chull(MDS1, MDS2))
+```
+```{r}
+#Plotando o gráfico
+ggplot(nmds, aes(x=MDS1,y=MDS2)) + geom_point(size=3)  + geom_polygon(data = hull, alpha = 0.5,col= "black", fill = "olivedrab4")+ theme_classic() + labs(title = "Functional Richness",x = NULL, y = NULL)
+```
+
+Com esses três índices é possível traçar um melhor panorama da comunidade e identificar mudanças ao longo do espaço e/ou tempo. 
+
+
+Qualquer dúvida, correção ou sugestão pode ser encaminhada para gfellipe5@gmail.com
+
+##Referências

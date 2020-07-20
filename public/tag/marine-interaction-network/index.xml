@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Marine interaction network | Gabriel Rodrigues</title>
+    <link>/tag/marine-interaction-network/</link>
+      <atom:link href="/tag/marine-interaction-network/index.xml" rel="self" type="application/rss+xml" />
+    <description>Marine interaction network</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Marine interaction network</title>
+      <link>/tag/marine-interaction-network/</link>
+    </image>
+    
+    <item>
+      <title>Structural patterns of a coastal hermit crab−gastropod shell interaction network: new insights from a unique relationship</title>
+      <link>/publication/meps/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/meps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The hermit crab–shell relationship through the lens of interaction networks: The use of network metrics and species role across communities</title>
+      <link>/publication/austral/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/austral/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

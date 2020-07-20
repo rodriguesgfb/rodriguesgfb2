@@ -1,0 +1,87 @@
+---
+title: "Particionando a diversidade beta"
+author: "Gabriel F. B. Rodrigues"
+date: "2020-07-03"
+lastmod: '2020-07-03T15:24:21-03:00'
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 2
+bibliography: baselga.bib
+---
+
+
+
+<p>Há muito tempo naturalistas e ecólogos entendem que a diversidade biológica não está homogeneamente distribuída na superfície da Terra. Dessa forma, a diversidade beta tenta entender o quão diferente (ou quão similar) é a comunidade de dois ou mais locais (ou tempos) distintos. Geralmente as métricas de diversidade beta são baseadas em similaridade, variando de zero (comunidades totalmente distintas) até um (comunidades totalmente similares).</p>
+<div id="o-que-torna-duas-comunidades-distintas" class="section level2">
+<h2>O que torna duas comunidades distintas</h2>
+<p>Potencialmente dois processos distintos e complementares podem resultar na diferença das comunidades <span class="citation">(Baselga and Orme 2012)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Reposição de espécies (turnover)</strong>: Consiste na substituição de espécies de um local por espécies diferentes em outro local.</p></li>
+<li><p><strong>Perda (ou ganho) de espécies</strong>: Consiste no desaparecimento (ou aparecimento) de uma espécie em um único local, tornando assim a comunidade de menor número de espécies (menor riqueza) um subconjunto da comunidade com maior número de espécies. Esse padrão pode ser chamado de aninhamento <strong>(nestedness)</strong>.</p></li>
+</ol>
+<div id="funções-do-pacote-betapart-baselga2012betapart" class="section level3">
+<h3>Funções do pacote <code>betapart()</code> <span class="citation">(Baselga and Orme 2012)</span></h3>
+<p>A função desse pacote é disponibilizar um conjunto de ferramentas para calcular e particionar a diversidade beta em seus dois componentes descritos <strong>(turnover e nestedness)</strong></p>
+</div>
+</div>
+<div id="calculando-os-componentes-e-database-utilizado." class="section level2">
+<h2>Calculando os componentes e database utilizado.</h2>
+<p>Para calcular os componentes da diversidade beta iremos utilizar a Database embutida no pacote <code>betapart()</code> que consiste na diversidade de aves dos Estados Unidos da América nos anos de 1980 e 2000.</p>
+<pre class="r"><code>require(betapart) #carregar pacote
+data(bbsData) #Carregar database</code></pre>
+<div id="objetos-utilizados" class="section level3">
+<h3>Objetos utilizados</h3>
+<p>Primeiramente é necessário criar uma matriz de dissimilaridade <strong>(betapart object)</strong> baseado numa matriz de presença/ausência, necessário para outras análises utilizando a função <code>betapart.core()</code>. O conjunto de dados aceito para todas as funções do <code>betapart()</code> consiste em uma matrix (m) de presença (1) e ausência (0) de <em>m</em> espécies (colunas) em <em>n</em> locais (linhas).</p>
+<pre class="r"><code>#Criar objeto betapart
+beta1980&lt;- betapart.core(bbs1980) #Criando objeto da comunidade de Aves de 1980
+beta2000&lt;- betapart.core(bbs2000) #Criando objeto da comunidade de Aves de 2000</code></pre>
+<p>Agora com os objetos criados é possível calcular a diversidade beta total e seus 2 componentes (turnover e nestedness).</p>
+<pre class="r"><code>bm1980&lt;-beta.multi(beta1980, &quot;sorensen&quot;)
+bm2000&lt;-beta.multi(beta2000,&quot;sorensen&quot;)</code></pre>
+</div>
+<div id="função-beta.pair" class="section level3">
+<h3>Função <code>beta.pair()</code></h3>
+<p>Para calcular a diversidade beta total e seus componentes entre cada par de local amostrado utiliza-se a função <code>beta.pair()</code>.</p>
+<pre class="r"><code>bp1980&lt;-beta.pair(beta1980, &quot;sorensen&quot;)
+bp2000&lt;-beta.pair(beta2000,&quot;sorensen&quot;)</code></pre>
+<p>Para representar graficamente a diversidade beta pode ser feito uma análise de agrupamento (clusters) com os dados já calculados.</p>
+<pre class="r"><code>plot(hclust(bp1980$beta.sor, method=&quot;average&quot;), hang=-1, main=&#39;&#39;, sub=&#39;&#39;, xlab=&#39;&#39;) 
+title(xlab=expression(beta[sor]), line=0.3)</code></pre>
+<p><img src="/post/Betapart/beta_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code>plot(hclust(bp2000$beta.sor, method=&quot;average&quot;), hang=-1, main=&#39;&#39;, sub=&#39;&#39;, xlab=&#39;&#39;) 
+title(xlab=expression(beta[sor]), line=0.3)</code></pre>
+<p><img src="/post/Betapart/beta_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Para entender melhor o que torna as comunidades distintas é necessário entender o padrão dos valores dos componentes encontrados. Para isso podemos agrupar os valores de <strong>turnover</strong> e <strong>nestedness</strong> encontrados em cada comparação par-a-par de 2 locais diferentes em 2 períodos diferentes.</p>
+<pre class="r"><code>require(tidyverse)
+#Acessando componentes
+turnover&lt;- as.matrix(bp1980$beta.sim) ##Para acessar o componente turnover
+nestedness&lt;- as.matrix(bp1980$beta.sne)##Para acessar o componente nestedness
+
+#Manipulando os dados
+library(reshape)
+turnover&lt;-melt(turnover)
+nestedness&lt;-melt(nestedness)
+
+turnover&lt;- data.frame(turnover, component = &quot;turnover&quot;)
+nestedness&lt;- data.frame(nestedness, component = &quot;nestedness&quot;)
+df1&lt;- bind_rows(turnover, nestedness)</code></pre>
+<p>Para representar os valores dos componentes encontrados utilizaremos um gráfico de densidade utilizando o pacote <code>ggplot2()</code></p>
+<pre class="r"><code>ggplot(data=df1, aes(group = component,fill=component, x = value)) +
+  geom_density(adjust=1.5, alpha = .8)+ theme_classic() + labs()</code></pre>
+<p><img src="/post/Betapart/beta_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Podemos perceber que o componente <strong>nestedness</strong> possuem geralmente menores valores (0 - 0.25), dessa forma a distinção dessas comunidades é explicada principalmente pelo componente <strong>turnover</strong>, ou seja, pela reposição (substituição) de espécies entre um local e outro.</p>
+<p>Qualquer dúvida, correção ou sugestão pode ser encaminhada para <a href="mailto:gfellipe5@gmail.com">gfellipe5@gmail.com</a></p>
+</div>
+<div id="referências" class="section level3 unnumbered">
+<h3>Referências</h3>
+<div id="refs" class="references">
+<div id="ref-baselga2012betapart">
+<p>Baselga, Andrés, and C David L Orme. 2012. “Betapart: An R Package for the Study of Beta Diversity.” <em>Methods in Ecology and Evolution</em> 3 (5). Wiley Online Library: 808–12.</p>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adilson Fransozo | Gabriel Rodrigues</title>
+    <link>/author/adilson-fransozo/</link>
+      <atom:link href="/author/adilson-fransozo/index.xml" rel="self" type="application/rss+xml" />
+    <description>Adilson Fransozo</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Adilson Fransozo</title>
+      <link>/author/adilson-fransozo/</link>
+    </image>
+    
+    <item>
+      <title>Structural patterns of a coastal hermit crab−gastropod shell interaction network: new insights from a unique relationship</title>
+      <link>/publication/meps/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/meps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Environmental factors modulating the bathymetric distribution of the demographic groups of Achelous spinimanus (Crustacea)</title>
+      <link>/publication/camila/</link>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/publication/camila/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Decapod crustaceans captured along with the sea-bob shrimp fisheries on non-consolidated sublitoral from northern coast of São Paulo, Brazil</title>
+      <link>/publication/pesca/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      <guid>/publication/pesca/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The different depths gradients may affect the reproductive dynamics of Hepatus pudibundus (Herbst, 1785) (Decapoda: Aethridae) in the southeastern region of Brazil</title>
+      <link>/publication/veronica/</link>
+      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
+      <guid>/publication/veronica/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

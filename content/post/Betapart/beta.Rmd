@@ -1,0 +1,105 @@
+---
+title: "Particionando a diversidade beta"
+author: "Gabriel F. B. Rodrigues"
+date: "2020-07-03"
+lastmod: '2020-07-03T15:24:21-03:00'
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 2
+bibliography: baselga.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Há muito tempo naturalistas e ecólogos entendem que a diversidade biológica não está homogeneamente distribuída na superfície da Terra. Dessa forma, a diversidade beta tenta entender o quão diferente (ou quão similar) é a comunidade de dois ou mais locais (ou tempos) distintos. Geralmente as métricas de diversidade beta são baseadas em similaridade, variando de zero (comunidades totalmente distintas) até um (comunidades totalmente similares). 
+
+##O que torna duas comunidades distintas
+Potencialmente dois processos distintos e complementares podem resultar na diferença das comunidades [@baselga2012betapart]. 
+
+  1. **Reposição de espécies (turnover)**: Consiste na substituição de espécies de um local por espécies diferentes em outro local.
+  
+  2. **Perda (ou ganho) de espécies**: Consiste no desaparecimento (ou aparecimento) de uma espécie em um único local, tornando assim a comunidade de menor número de espécies (menor riqueza) um subconjunto da comunidade com maior número de espécies. Esse padrão pode ser chamado de aninhamento **(nestedness)**.  
+
+###Funções do pacote `betapart()` [@baselga2012betapart]
+A função desse pacote é disponibilizar um conjunto de ferramentas para calcular e particionar a diversidade beta em seus dois componentes descritos **(turnover e nestedness)**
+
+##Calculando os componentes e database utilizado.
+Para calcular os componentes da diversidade beta iremos utilizar a Database embutida no pacote `betapart()` que consiste na diversidade de aves dos Estados Unidos da América nos anos de 1980 e 2000. 
+
+```{r, message = F}
+require(betapart) #carregar pacote
+data(bbsData) #Carregar database
+```
+
+###Objetos utilizados
+Primeiramente é necessário criar uma matriz de dissimilaridade **(betapart object)**  baseado numa matriz de presença/ausência, necessário para outras  análises utilizando a função `betapart.core()`. O conjunto de dados aceito para todas as funções do `betapart()` consiste em uma matrix (m) de presença (1) e ausência (0) de *m* espécies (colunas) em *n* locais (linhas). 
+
+```{r, message = F}
+#Criar objeto betapart
+beta1980<- betapart.core(bbs1980) #Criando objeto da comunidade de Aves de 1980
+beta2000<- betapart.core(bbs2000) #Criando objeto da comunidade de Aves de 2000
+
+```
+
+Agora com os objetos criados é possível calcular a diversidade beta total e seus 2 componentes (turnover e nestedness). 
+```{r, message = F}
+bm1980<-beta.multi(beta1980, "sorensen")
+bm2000<-beta.multi(beta2000,"sorensen")
+
+```
+### Função `beta.pair()`
+Para calcular a diversidade beta total e seus componentes entre cada par de local amostrado utiliza-se a função `beta.pair()`.
+
+```{r}
+bp1980<-beta.pair(beta1980, "sorensen")
+bp2000<-beta.pair(beta2000,"sorensen")
+```
+
+Para representar graficamente a diversidade beta pode ser feito uma análise de agrupamento (clusters) com os dados já calculados. 
+
+```{r}
+plot(hclust(bp1980$beta.sor, method="average"), hang=-1, main='', sub='', xlab='') 
+title(xlab=expression(beta[sor]), line=0.3)
+
+```
+```{r}
+plot(hclust(bp2000$beta.sor, method="average"), hang=-1, main='', sub='', xlab='') 
+title(xlab=expression(beta[sor]), line=0.3)
+```
+
+Para entender melhor o que torna as comunidades distintas é necessário entender o padrão dos valores dos componentes encontrados. Para isso podemos agrupar os valores de **turnover** e **nestedness** encontrados em cada comparação par-a-par de 2 locais diferentes em 2 períodos diferentes. 
+
+```{r, message = F, warning = F}
+require(tidyverse)
+#Acessando componentes
+turnover<- as.matrix(bp1980$beta.sim) ##Para acessar o componente turnover
+nestedness<- as.matrix(bp1980$beta.sne)##Para acessar o componente nestedness
+
+#Manipulando os dados
+library(reshape)
+turnover<-melt(turnover)
+nestedness<-melt(nestedness)
+
+turnover<- data.frame(turnover, component = "turnover")
+nestedness<- data.frame(nestedness, component = "nestedness")
+df1<- bind_rows(turnover, nestedness)
+```
+Para representar os valores dos componentes encontrados utilizaremos um gráfico de densidade utilizando o pacote `ggplot2()`
+
+```{r}
+ggplot(data=df1, aes(group = component,fill=component, x = value)) +
+  geom_density(adjust=1.5, alpha = .8)+ theme_classic() + labs()
+```
+
+Podemos perceber que o componente **nestedness** possuem geralmente menores valores (0 - 0.25), dessa forma a distinção dessas comunidades é explicada principalmente pelo componente **turnover**, ou seja, pela reposição (substituição) de espécies entre um local e outro. 
+
+Qualquer dúvida, correção ou sugestão pode ser encaminhada para gfellipe5@gmail.com
+
+###Referências
