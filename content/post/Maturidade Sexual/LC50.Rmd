@@ -1,0 +1,61 @@
+---
+title: "Comparando a maturidade sexual morfológica"
+author: "Gabriel F. B. Rodrigues"
+date: "7 de agosto de 2020"
+output: html_document
+bibliography: wenner1974.bib
+tags:
+  - Caranguejo
+  - Crustacea
+  - Regressão Binomial
+---
+
+##Maturidade Sexual
+A maturidade sexual pode ser entendida como a transição de um organismo do estado jovem (inapto a se reproduzir) para adulto (apto a reprodução). Portanto, essa questão é muito importante para medidas de conservação de espécies, como por exemplo o estabelecimento de um tamanho mínimo para pescados. 
+O tamanho da maturidade sexual pode variar entre espécies e até mesmo entre populações da mesma espécie. Por exemplo, indivíduos de populações que vivem em um ambiente rico em alimento e com maiores temperaturas podem crescer mais rápido do que indivíduos que vivem em ambientes mais severos. Essa proposta foi amplamente discutida por @wenner1974size, onde utilizava o tamanho médio mínimo de fêmeas com ovos no abdome para estipular o tamanho da maturidade sexual de uma população. 
+
+##Calculando a maturidade sexual
+Tendo em vista que dentro de uma população alguns indivíduos vão se tornar "adultos" em maiores tamanhos e alguns em menores tamanhos, enquanto a maioria isso irá acontecer em tamanhos intermediários. Assim podemos assumir uma distribuição normal para o tamanho dos indivíduos de uma população. 
+
+```{r}
+#Gerando um data frame de distribuição normal para individuos de uma população de caranguejos. Note que LC = Largura da Carapaça em centímetros. E que o fator Adulto é representado por digitos binários onde 0 = Jovem e 1 = Adulto
+Jovens<- rnorm(n = 50, mean = 10, sd = 2)
+Adultos<- rnorm(n = 50, mean = 15, sd = 2)
+df<- data.frame(LC = c(Jovens, Adultos), Maturidade = c(rep("Jovem", 50), rep("Adulto", 50)), Adulto = c(rep(0,50), rep(1,50)))
+```
+
+Criado um data frame aleatório de distribuição normal iremos criar um modelo. Utilizaremos um 'glm' (generalized linear model) com distribuição binomial, que nada mais é que um modelo linear que assume que a variável y (no caso "Adulto") tem uma distribuição binomial. Segue o código.
+
+```{r setup, include=FALSE}
+model1<- glm(df$Maturidade ~ df$LC,family='binomial')
+summary(model1)
+```
+
+Validado o modelo utilizaremos a função gerado pelo modelo para calcular o valor do tamanho da carapaça em que 50% dos indivíduos são adultos e 50% são jovens, chamaremos de LC50.
+```{r}
+LC50 = (log(.5/(1-.5)) - coef(model1)[1])/coef(model1)[2]
+LC50
+```
+
+###Representando graficamente
+Podemos representar graficamente a distribuição da função encontrada pelo modelo e ainda o valor de LC50 obtido.
+
+```{r}
+#Plotando o gráfico
+require(ggplot2)
+ggplot(data=df, aes(x=LC, y=Adulto, label = LC50))+
+  geom_point()+
+  geom_smooth(method = 'glm', method.args = list(family = "binomial"), se=T, col="red")+ 
+  geom_segment(lty = 2, aes(x = 0, y = .5, xend = LC50, yend = .5))+
+  geom_segment(lty=2,aes(x = LC50, y = 0, xend = LC50, yend = 0.5))+
+  geom_point(x = LC50, y = 0.5, size = 3, shape =21, fill = "red" ) +
+  geom_text(label = sprintf(LC50, fmt = '%#.2f'), x = LC50, y = 0.5, hjust=1,vjust=1, size = 5) +
+  theme_classic() 
+```
+
+Encontramos que nessa população hipotética os 50% dos indivíduos se tornam adultos (aptos a reprodução) com um tamanho de aproximado 12.7 cm. Essa abordagem pode ser utilizada para comparar populações de diferentes espécies e até populações diferentes de uma mesma espécie que habita localidades diferentes. Contribuindo assim para tomada de decisões com intuito de conservar a fauna de determinado lugar.
+
+Qualquer dúvida, correção ou sugestão pode ser encaminhada para gfellipe5@gmail.com
+
+#Referências
+
