@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Crustacea | Gabriel Rodrigues</title>
-    <link>/tag/crustacea/</link>
-      <atom:link href="/tag/crustacea/index.xml" rel="self" type="application/rss+xml" />
-    <description>Crustacea</description>
+    <title>Caranguejo | Gabriel Rodrigues</title>
+    <link>/tag/caranguejo/</link>
+      <atom:link href="/tag/caranguejo/index.xml" rel="self" type="application/rss+xml" />
+    <description>Caranguejo</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Fri, 07 Aug 2020 17:30:21 -0300</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
-      <title>Crustacea</title>
-      <link>/tag/crustacea/</link>
+      <title>Caranguejo</title>
+      <link>/tag/caranguejo/</link>
     </image>
     
     <item>
@@ -66,14 +66,6 @@ require(ggplot2)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>The different depths gradients may affect the reproductive dynamics of Hepatus pudibundus (Herbst, 1785) (Decapoda: Aethridae) in the southeastern region of Brazil</title>
-      <link>/publication/veronica/</link>
-      <pubDate>Thu, 28 Mar 2013 00:00:00 +0000</pubDate>
-      <guid>/publication/veronica/</guid>
-      <description></description>
     </item>
     
   </channel>

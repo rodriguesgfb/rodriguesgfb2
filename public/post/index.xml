@@ -5,7 +5,7 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Fri, 24 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>pt</language><lastBuildDate>Fri, 07 Aug 2020 17:30:21 -0300</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
@@ -13,14 +13,58 @@
     </image>
     
     <item>
-      <title>Maturidade sexual </title>
-      <link>/post/maturidade-sexual/</link>
-      <pubDate>Fri, 24 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/maturidade-sexual/</guid>
+      <title>Comparando a maturidade sexual morfológica</title>
+      <link>/post/ms/lc50/</link>
+      <pubDate>Fri, 07 Aug 2020 17:30:21 -0300</pubDate>
+      <guid>/post/ms/lc50/</guid>
       <description>
 
 
-
+&lt;div id=&#34;maturidade-sexual&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Maturidade Sexual&lt;/h2&gt;
+&lt;p&gt;A maturidade sexual pode ser entendida como a transição de um organismo do estado jovem (inapto a se reproduzir) para adulto (apto a reprodução). Portanto, essa questão é muito importante para medidas de conservação de espécies, como por exemplo o estabelecimento de um tamanho mínimo para pescados. O tamanho da maturidade sexual pode variar entre espécies e até mesmo entre populações da mesma espécie. Por exemplo, indivíduos de populações que vivem em um ambiente rico em alimento e com maiores temperaturas podem crescer mais rápido do que indivíduos que vivem em ambientes mais severos. Essa proposta foi amplamente discutida por &lt;span class=&#34;citation&#34;&gt;Wenner, Fusaro, and Oaten (1974)&lt;/span&gt;, onde utilizava o tamanho médio mínimo de fêmeas com ovos no abdome para estipular o tamanho da maturidade sexual de uma população.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;calculando-a-maturidade-sexual&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Calculando a maturidade sexual&lt;/h2&gt;
+&lt;p&gt;Tendo em vista que dentro de uma população alguns indivíduos vão se tornar &amp;quot;adultos&amp;quot; em maiores tamanhos e alguns em menores tamanhos, enquanto a maioria isso irá acontecer em tamanhos intermediários. Assim podemos assumir uma distribuição normal para o tamanho dos indivíduos de uma população.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Gerando um data frame de distribuição normal para individuos de uma população de caranguejos. Note que LC = Largura da Carapaça em centímetros. E que o fator Adulto é representado por digitos binários onde 0 = Jovem e 1 = Adulto
+Jovens&amp;lt;- rnorm(n = 50, mean = 10, sd = 2)
+Adultos&amp;lt;- rnorm(n = 50, mean = 15, sd = 2)
+df&amp;lt;- data.frame(LC = c(Jovens, Adultos), Maturidade = c(rep(&amp;quot;Jovem&amp;quot;, 50), rep(&amp;quot;Adulto&amp;quot;, 50)), Adulto = c(rep(0,50), rep(1,50)))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Criado um data frame aleatório de distribuição normal iremos criar um modelo. Utilizaremos um &#39;glm&#39; (generalized linear model) com distribuição binomial, que nada mais é que um modelo linear que assume que a variável y (no caso &amp;quot;Adulto&amp;quot;) tem uma distribuição binomial. Segue o código.&lt;/p&gt;
+&lt;p&gt;Validado o modelo utilizaremos a função gerado pelo modelo para calcular o valor do tamanho da carapaça em que 50% dos indivíduos são adultos e 50% são jovens, chamaremos de LC50.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;LC50 = (log(.5/(1-.5)) - coef(model1)[1])/coef(model1)[2]
+LC50&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## (Intercept) 
+##    12.73212&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;representando-graficamente&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Representando graficamente&lt;/h3&gt;
+&lt;p&gt;Podemos representar graficamente a distribuição da função encontrada pelo modelo e ainda o valor de LC50 obtido.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Plotando o gráfico
+require(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Carregando pacotes exigidos: ggplot2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=df, aes(x=LC, y=Adulto, label = LC50))+
+  geom_point()+
+  geom_smooth(method = &amp;#39;glm&amp;#39;, method.args = list(family = &amp;quot;binomial&amp;quot;), se=T, col=&amp;quot;red&amp;quot;)+ 
+  geom_segment(lty = 2, aes(x = 0, y = .5, xend = LC50, yend = .5))+
+  geom_segment(lty=2,aes(x = LC50, y = 0, xend = LC50, yend = 0.5))+
+  geom_point(x = LC50, y = 0.5, size = 3, shape =21, fill = &amp;quot;red&amp;quot; ) +
+  geom_text(label = sprintf(LC50, fmt = &amp;#39;%#.2f&amp;#39;), x = LC50, y = 0.5, hjust=1,vjust=1, size = 5) +
+  theme_classic() &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/MS/LC50_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Encontramos que nessa população hipotética os 50% dos indivíduos se tornam adultos (aptos a reprodução) com um tamanho de aproximado 12.7 cm. Essa abordagem pode ser utilizada para comparar populações de diferentes espécies e até populações diferentes de uma mesma espécie que habita localidades diferentes. Contribuindo assim para tomada de decisões com intuito de conservar a fauna de determinado lugar.&lt;/p&gt;
+&lt;p&gt;Qualquer dúvida, correção ou sugestão pode ser encaminhada para &lt;a href=&#34;mailto:gfellipe5@gmail.com&#34;&gt;gfellipe5@gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;referências&#34; class=&#34;section level1 unnumbered&#34;&gt;
+&lt;h1&gt;Referências&lt;/h1&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-wenner1974size&#34;&gt;
+&lt;p&gt;Wenner, Adrian M, Craig Fusaro, and Allan Oaten. 1974. “Size at Onset of Sexual Maturity and Growth Rate in Crustacean Populations.” &lt;em&gt;Canadian Journal of Zoology&lt;/em&gt; 52 (9). NRC Research Press: 1095–1106.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -126,7 +170,7 @@ df1&amp;lt;- bind_rows(turnover, nestedness)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;breve-explicação-dos-índices&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Breve explicação dos índices&lt;/h1&gt;
-&lt;p&gt;Levando em conta que o Nicho funcional possui T dimensões definidas por T eixos, cada eixo defino por cada traço funcional, a riqueza funcional de uma comunidade &lt;em&gt;(Frich)&lt;/em&gt; pode ser calculada como o espaço preenchido por determinada comunidade. Cada espécie representa um ponto no espaço, assim estima-se o volume preenchido no espaço T dimensional. A uniformidade funcional &lt;em&gt;(Feven)&lt;/em&gt; pode ser entendida como a regularidade com que o espaço é preenchido pelas espécies, esse índice vai de 0 a 1, sendo que 1 representa uma comunidade onde as espécies estão todas equidistantes no plano funcional. Por fim, a divergência funcional &lt;em&gt;(Fdiv)&lt;/em&gt; refere-se a quão divergentes as espécies são dentro de uma comunidade. Esse índice também varia de 0 a 1, sendo que 1 representa quando as espécies mais abundantes estão distantes do “centro de gravidade” do espaço funcional.&lt;/p&gt;
+&lt;p&gt;Levando em conta que o Nicho funcional possui T dimensões definidas por T eixos, cada eixo defino por cada traço funcional, a riqueza funcional de uma comunidade &lt;em&gt;(Frich)&lt;/em&gt; pode ser calculada como o espaço preenchido por determinada comunidade. Cada espécie representa um ponto no espaço, assim estima-se o volume preenchido no espaço T dimensional. A uniformidade funcional &lt;em&gt;(Feven)&lt;/em&gt; pode ser entendida como a regularidade com que o espaço é preenchido pelas espécies, esse índice vai de 0 a 1, sendo que 1 representa uma comunidade onde as espécies estão todas equidistantes no plano funcional. Por fim, a divergência funcional &lt;em&gt;(Fdiv)&lt;/em&gt; refere-se a quão divergentes as espécies são dentro de uma comunidade. Esse índice também varia de 0 a 1, sendo que 1 representa quando as espécies mais abundantes estão distantes do &amp;quot;centro de gravidade&amp;quot; do espaço funcional.&lt;/p&gt;
 &lt;p&gt;Para maiores detalhes sobre os índices funcionais consultar &lt;em&gt;Velligér et al.(2008)&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;calculando-índices-de-diversidade-funcional&#34; class=&#34;section level1&#34;&gt;
