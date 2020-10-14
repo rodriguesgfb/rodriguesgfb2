@@ -15,7 +15,7 @@ bibliography: scholar.bib
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-A diversidade funcional vem se destacando como uma das mais promissoras maneiras de se medir a diversidade biológica, por incorporar traços funcionas que possuem algum valor ecológico e que possuem alguma importância na manutenção dos serviços ecossistêmicos. Sendo assim, a proposta discutida por [@villeger2008new] é de utilizar três índices independentes e complementares para descrever a diversidade funcional de uma determinada comunidade. 
+A diversidade funcional vem se destacando como uma das mais promissoras maneiras de se medir a diversidade biológica, por incorporar traços funcionais que possuem algum valor ecológico e que possuem alguma importância na manutenção dos serviços ecossistêmicos. Sendo assim, a proposta discutida por [@villeger2008new] é de utilizar três índices independentes e complementares para descrever a diversidade funcional de uma determinada comunidade. 
 
 Os índices são:  
   
