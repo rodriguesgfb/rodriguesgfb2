@@ -1,282 +1,185 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/publication-type/2/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/authors/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/calcinus-tibicen/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/author/gabriel-fellipe-barros-rodrigues/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/hermit-crab/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/author/maria-lucia-negreiros-fransozo/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/marine-interaction-network/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/author/mateus-pereira-santos/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/modularity/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication_types/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/publication/mateus/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tag/sai/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/author/vivian-fransozo/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tag/caranguejo/</loc>
     <lastmod>2020-08-07T17:30:21-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/ms/lc50/</loc>
     <lastmod>2020-08-07T17:30:21-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tag/crustacea/</loc>
     <lastmod>2020-08-07T17:30:21-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/</loc>
     <lastmod>2020-08-07T17:30:21-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tag/regressao-binomial/</loc>
     <lastmod>2020-08-07T17:30:21-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-08-07T17:30:21-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/betapart/beta/</loc>
     <lastmod>2020-07-03T15:24:21-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/fd/fd1/</loc>
     <lastmod>2020-06-05T17:30:21-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication-type/2/</loc>
-    <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/adilson-fransozo/</loc>
     <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
-    <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/caio-s.-ballarin/</loc>
     <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/felipe-w.-amorim/</loc>
     <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/gabriel-f.b.-rodrigues/</loc>
     <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/hermit-crab/</loc>
-    <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/marine-interaction-network/</loc>
-    <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/modularity/</loc>
-    <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-    <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication/meps/</loc>
     <lastmod>2020-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/alexandre-r.-da-silva/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/antonio-l.-castilho/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/daniel-lima/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/gabriel-f.-b.-rodrigues/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/rogerio-c.-da-costa/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication/austral/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/valter-j.-cobo/</loc>
     <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/courses/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/aline-n.-sousa/</loc>
     <lastmod>2019-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/camila-h.-bernardo/</loc>
     <lastmod>2019-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication/camila/</loc>
     <lastmod>2019-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/thiago-e.-silva/</loc>
     <lastmod>2019-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/veronica-p.-bernardes/</loc>
     <lastmod>2019-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/aline-n.-de-sousa/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tag/bycatch/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication/pesca/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/jeniffer-n.-teles/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/maria-lucia-negreiros-fransozo/</loc>
-    <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tag/pesca/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tag/shrimp/</loc>
     <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/vivian-fransozo/</loc>
-    <lastmod>2016-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tag/crab/</loc>
     <lastmod>2013-03-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/francislene-k.-martins/</loc>
     <lastmod>2013-03-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/giovana-bertini/</loc>
     <lastmod>2013-03-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication/veronica/</loc>
     <lastmod>2013-03-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/gabriel-rodrigues/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
   </url>
-  
 </urlset>
