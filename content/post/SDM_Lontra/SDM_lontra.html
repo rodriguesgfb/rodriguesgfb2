@@ -1,0 +1,174 @@
+---
+title: "SDM para prever a distribuição da Lontra neotropical"
+author: "Rodrigues, G.F.B."
+date: "2021-04-30"
+output:
+  html_document
+bibliography: lontra1.bib
+tags:
+  - SDM
+  - Lontra longicaudis
+  - bioclim
+  - GBIF
+
+---
+
+
+
+<p>Cada vez mais dados sobre a distribuição de espécies estão sendo compilados e disponibilizados gratuitamente em diversas plataformas (GBIF, iNaturalist, CITES). Ao mesmo tempo, dados climáticos cada vez mais precisos são gerados e disponibilizados. Isso traz enormes possibilidades para testar e comparar a área de ocorrência de espécies de interesse para diversos propósitos. O conjunto de ferramentas conhecido como <strong>Species Distribution Modeling (SDM)</strong> combinam dados de ocorrência (variável resposta) com parâmetros ambientais (variáveis preditoras), geralmente são utilizados para prever a distribuição de espécies em cenários atuais e/ou futuros. Para mais detalhes sobre essa abordagem sugiro a leitura de <span class="citation">(N. Barve et al. <a href="#ref-barve2011crucial">2011</a>)</span>. Dito isto, proponho de mostrar de forma breve e superficial a ulização de um &quot;SDM&quot; para prever a área de ocorrência da lontra neotropical (<em>Lontra longicaudis</em>) utilizando dados climáticos. Ressalto que esse contéudo tem caratér exclusivamente didático e não deve ser tratado como informação de valor cientifico.</p>
+<div id="lontra-neotropical" class="section level2">
+<h2>Lontra neotropical</h2>
+<p>Alguns estudos já utilizaram dessa abordagem para testar hipóteses sobre a área de ocorrência <span class="citation">(Rheingantz, Menezes, and Thoisy <a href="#ref-rheingantz2014defining">2014</a>)</span> (citar) e sobre a história evolutiva <span class="citation">(Hernández-Romero et al. <a href="#ref-hernandez2018role">2018</a>)</span> da lontra netropical. O que tornara o trabalho mais facil pois iremos selecionar as váriáveis ambientais que explicam a ocorrência das lontras.</p>
+<div class="figure">
+<img src="lontra.jpg" alt="Lontra longicaudis © Cláudio Dias Timm" />
+<p class="caption"><em>Lontra longicaudis</em> © Cláudio Dias Timm</p>
+</div>
+</div>
+<div id="passo-a-passo-sdm" class="section level2">
+<h2>Passo-a-passo SDM</h2>
+<div id="coletando-dados" class="section level3">
+<h3>Coletando dados</h3>
+<p>Os dados de ocorrência de <em>Lontra longicaudis</em> foram compilados da plataforma <strong>Global Biodiversity Information Facility (GBIF)</strong> e estão diposineis no seguinte link: <a href="https://doi.org/10.15468/dl.jfvbtt" class="uri">https://doi.org/10.15468/dl.jfvbtt</a></p>
+</div>
+<div id="pacotes-utilizados" class="section level3">
+<h3>Pacotes utilizados</h3>
+<pre class="r"><code>#Carregar pacotes
+library(&quot;sp&quot;)
+library(&quot;raster&quot;)
+library(&quot;maptools&quot;)
+library(&quot;rgdal&quot;)
+library(&quot;dismo&quot;)
+library(&quot;tidyverse&quot;)
+library(&quot;sf&quot;)</code></pre>
+<pre class="r"><code>#Criando diretórios
+dir.create(path = &quot;data&quot;)
+dir.create(path = &quot;output&quot;)</code></pre>
+</div>
+<div id="carregando-dados" class="section level3">
+<h3>Carregando dados</h3>
+<pre class="r"><code>obs.data&lt;- read.csv(file = &quot;occurrence_lontra.csv&quot;, sep = &quot;;&quot;)
+obs.data &lt;- obs.data[!is.na(obs.data$decimalLatitude), ] #remover NAs do data.frame
+obs.data&lt;- obs.data %&gt;% 
+  filter(decimalLongitude &lt; -20) %&gt;% 
+  filter(decimalLatitude &gt; -65)</code></pre>
+</div>
+<div id="obtendo-dados-climáticos" class="section level3">
+<h3>Obtendo dados climáticos</h3>
+<p>Utilizaremos a base de dados do <code>bioclim</code>, no entanto, selecionaremos somente as váriaveis climáticas que tenham valor biológico/ecológico (citar trabalho). Bioclim consiste em um conjunto de 19 variáveis climáticas medidas mensalmente e são bastante utilizadas para modelos de distribuição de espécies. Para mais informações acesse: <a href="https://www.worldclim.org/data/bioclim.html" class="uri">https://www.worldclim.org/data/bioclim.html</a></p>
+<pre class="r"><code>bioclim.data &lt;- getData(name = &quot;worldclim&quot;,
+                        var = &quot;bio&quot;,
+                        res = 5,
+                        path = &quot;&quot;,
+                        lon = max.lon,
+                        lat = max.lat)
+bioclim.data2&lt;- bioclim.data[[c(&quot;bio1&quot;,&quot;bio2&quot;,&quot;bio4&quot;,&quot;bio5&quot;,&quot;bio7&quot;,&quot;bio12&quot;,&quot;bio14&quot;,&quot;bio15&quot;,&quot;bio18&quot;,&quot;bio19&quot;)]] #selecionando o subconjunto de variáveis</code></pre>
+</div>
+<div id="determinar-coodernadas-geográficas-para-o-modelo" class="section level3">
+<h3>Determinar coodernadas geográficas para o modelo</h3>
+<pre class="r"><code>max.lat &lt;- ceiling(max(obs.data$decimalLatitude))
+min.lat &lt;- floor(min(obs.data$decimalLatitude))
+max.lon &lt;- ceiling(max(obs.data$decimalLongitude))
+min.lon &lt;- floor(min(obs.data$decimalLongitude))
+coords &lt;- extent(x = c(min.lon, max.lon, min.lat, max.lat))</code></pre>
+</div>
+</div>
+<div id="construindo-o-modelo" class="section level2">
+<h2>Construindo o modelo</h2>
+<p>Utilizaremos o algoritimo bioclim para modelar a distribuição das espécies em relação as variáveis climáticas. O algoritimo compara a similaridade dos valores climáticos de locais em que a espécie a ser modelada ocorre (dados treino) e com outros locais em que a espécie não foi amostrada. Gerando um valor de probabilidade da ocorrência da espécie em determinada área.</p>
+<pre class="r"><code>bioclim.data1 &lt;- crop(x = bioclim.data2, y = coords) #juntar coordenadas com dados climáticos
+obs.data &lt;- obs.data[, c(&quot;decimalLongitude&quot;, &quot;decimalLatitude&quot;)] 
+model1 &lt;- bioclim(x = bioclim.data2, p = obs.data) #modelo construido com o algoritimo bioclim
+predict.presence1 &lt;- dismo::predict(object = model1, 
+                                    x = bioclim.data1, 
+                                    ext = coords) #Prever a presença baseado no modelo</code></pre>
+<div id="visualizando-o-modelo" class="section level3">
+<h3>Visualizando o modelo</h3>
+<pre class="r"><code># Mapa base
+data(wrld_simpl)
+plot(wrld_simpl, 
+     xlim = c(min.lon, max.lon),
+     ylim = c(min.lat, max.lat),
+     axes = TRUE, 
+     col = &quot;grey95&quot;)
+
+# Adicionar probabilidades do modelo
+plot(predict.presence1, add = TRUE,xlim = c(min.lon, max.lon),
+     ylim = c(min.lat, max.lat))
+
+# Adicionar pontos observados
+points(obs.data$decimalLongitude, obs.data$decimalLatitude, col = &quot;olivedrab&quot;, pch = 20, cex = 0.75)
+plot(wrld_simpl, add = TRUE, border = &quot;grey5&quot;)
+box()</code></pre>
+<p><img src="/post/SDM_Lontra/SDM_lontra_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>O mapa mostra a probabilidade da distribuição da lontra neotropical.</p>
+</div>
+</div>
+<div id="validando-o-modelo" class="section level2">
+<h2>Validando o modelo</h2>
+<p>É necessário avaliar o modelo em relação ao seu poder de predição. Para isso o conjunto de dados será separado em &quot;dados treino&quot;, representado 20% dos dados e &quot;dados teste&quot;, representando 80%. Para isso utilizaremos a função kfold do pacote dismo para atribuir a cada observação um grupo aleatório.</p>
+<pre class="r"><code>testing.group &lt;- 1
+group.presence &lt;- kfold(x = obs.data, k = 5) 
+table(group.presence)</code></pre>
+<pre><code>## group.presence
+##   1   2   3   4   5 
+## 279 279 280 279 279</code></pre>
+<pre class="r"><code>presence.train &lt;- obs.data[group.presence != testing.group, ]
+count(presence.train)</code></pre>
+<pre><code>##      n
+## 1 1117</code></pre>
+<pre class="r"><code>presence.test &lt;- obs.data[group.presence == testing.group, ]
+count(presence.test)</code></pre>
+<pre><code>##     n
+## 1 279</code></pre>
+<div id="construindo-o-modelo-e-testando" class="section level3">
+<h3>Construindo o modelo e testando</h3>
+<pre class="r"><code># Construir modelo com dados treino
+model2 &lt;- bioclim(x = bioclim.data2, p = presence.train)
+
+# Prever a presença do modelo
+predict.presence2 &lt;- dismo::predict(object = model2, 
+                                    x = bioclim.data2, 
+                                    ext = coords)
+
+# Usar dados teste para avaliar o modelo 
+bc.eval1 &lt;- evaluate(p = presence.test,   # Dados teste
+                     a = presence.train, # Dados treino
+                     model = model2,    # Modelo avaliado
+                     x = bioclim.data2)    # variáveis climáticas
+
+bc.threshold1 &lt;- threshold(x = bc.eval1, stat = &quot;spec_sens&quot;)</code></pre>
+</div>
+<div id="representação-visual-do-modelo" class="section level3">
+<h3>Representação visual do modelo</h3>
+<pre class="r"><code>#MAP
+world_map &lt;- map_data(&quot;world&quot;)
+raster&lt;- as.data.frame(predict.presence2, xy=T) %&gt;% drop_na()
+raster2&lt;- raster %&gt;% filter(raster$layer &gt; bc.threshold1 )
+
+g1&lt;- ggplot() +
+  geom_raster(data = raster2, aes(x = x, y = y, fill = layer)) +scale_fill_gradient(low=&quot;yellow&quot;,high = &quot;darkgreen&quot;)+ theme_classic() +
+  geom_polygon(data = world_map,aes(x = long, y = lat, group = group), fill = NA, col = &quot;black&quot;) + 
+  coord_sf(xlim = c(min.lon, max.lon), ylim = c(min.lat, max.lat), expand = FALSE) +xlab(&quot;Longitude&quot;)+ ylab(&quot;Latitude&quot;) +
+  geom_point(aes(x=obs.data$decimalLongitude, y = obs.data$decimalLatitude))
+g1</code></pre>
+<p><img src="/post/SDM_Lontra/SDM_lontra_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>Como podemos notar a abrangência da distribuição da lontra neotropical aumentou muito com a utilização desse modelo preditivo. Vale ressaltar que esse tipo de modelagem só levou em conta dados climáticos. Provavelmente outros fatores como: (1) barreiras geográficas intransponíveis, (2) presença de predadores/competidores e (3) disturbios antrópicos influenciam a distribuição e ocorrência desse animal.</p>
+<p>Temos então um panorama inicial de como utlizar essa abordagem para prever a ocorrência de uma espécie.</p>
+<p>Qualquer dúvida, correção ou sugestão pode ser encaminhada para <a href="mailto:gfellipe5@gmail.com">gfellipe5@gmail.com</a></p>
+<p>Obrigado.</p>
+</div>
+</div>
+<div id="referências" class="section level1 unnumbered">
+<h1>Referências</h1>
+<div id="refs" class="references">
+<div id="ref-barve2011crucial">
+<p>Barve, Narayani, Vijay Barve, Alberto Jiménez-Valverde, Andrés Lira-Noriega, Sean P Maher, A Townsend Peterson, Jorge Soberón, and Fabricio Villalobos. 2011. “The Crucial Role of the Accessible Area in Ecological Niche Modeling and Species Distribution Modeling.” <em>Ecological Modelling</em> 222 (11). Elsevier: 1810–9.</p>
+</div>
+<div id="ref-hernandez2018role">
+<p>Hernández-Romero, Pablo C, Carla Gutiérrez-Rodríguez, Carolina Valdespino, and David A Prieto-Torres. 2018. “The Role of Geographical and Ecological Factors on Population Divergence of the Neotropical Otter Lontra Longicaudis (Carnivora, Mustelidae).” <em>Evolutionary Biology</em> 45 (1). Springer: 37–55.</p>
+</div>
+<div id="ref-rheingantz2014defining">
+<p>Rheingantz, Marcelo Lopes, Jorge Fernando Saraiva de Menezes, and Benoit de Thoisy. 2014. “Defining Neotropical Otter Lontra Longicaudis Distribution, Conservation Priorities and Ecological Frontiers.” <em>Tropical Conservation Science</em> 7 (2). SAGE Publications Sage CA: Los Angeles, CA: 214–29.</p>
+</div>
+</div>
+</div>

@@ -11,7 +11,6 @@ tags:
   - Regressão Binomial
 ---
 
-##Maturidade Sexual
 A maturidade sexual pode ser entendida como a transição de um organismo do estado jovem (inapto a se reproduzir) para adulto (apto a reprodução). Portanto, essa questão é muito importante para medidas de conservação de espécies, como por exemplo o estabelecimento de um tamanho mínimo para pescados. 
 O tamanho da maturidade sexual pode variar entre espécies e até mesmo entre populações da mesma espécie. Por exemplo, indivíduos de populações que vivem em um ambiente rico em alimento e com maiores temperaturas podem crescer mais rápido do que indivíduos que vivem em ambientes mais severos. Essa proposta foi amplamente discutida por @wenner1974size, onde utilizava o tamanho médio mínimo de fêmeas com ovos no abdome para estipular o tamanho da maturidade sexual de uma população. 
 
